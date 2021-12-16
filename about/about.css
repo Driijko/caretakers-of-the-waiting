@@ -89,7 +89,7 @@ html {
 
 /* HEADER SECTION ////////////////////////////////////// */
 h1 {
-
+    padding-left: 1%;
     font-family: "Gugi", Arial, Helvetica, sans-serif;
     font-size: calc(var(--w)/7);
     
@@ -104,6 +104,7 @@ h1 {
     justify-content: space-evenly;
 
     text-align: right;
+    padding-right: 2%;
 
     font-family: "Gugi", Arial, Helvetica, sans-serif;
     font-size: calc(var(--w)/16);
@@ -115,6 +116,7 @@ h1 {
     display: inline-block;
     width: 30%;
     height: 10%;
+    margin-left: 1%;
 
     font-family: "Gruppo", Arial, Helvetica, sans-serif;
     font-size: calc(var(--w)/10);
@@ -141,6 +143,22 @@ h1 {
         url("../assets/visual/images/splash-pic-2.jpg")
     ;
 }
+
+#project-statement .ur {
+  padding-top: 15%;
+}
+
+#project-statement p {
+  font-family: "Comfortaa", sans-serif;
+  padding: 5%;
+  line-height: 1.5;
+}
+
+
+#project-statement .arrow-container {
+  margin-top: 20%;
+}
+
 
 /* TEAM SECTION //////////////////////////////////// */
 #team-section-header {
