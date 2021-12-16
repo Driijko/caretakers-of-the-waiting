@@ -1,0 +1,233 @@
+/* MENU SECTION /////////////////////////////////////////// */
+#menu {
+    position: relative;
+}
+
+#background {
+    visibility: hidden;
+    position: absolute;
+}
+
+/* HEADER ////////////////////////////////////// */
+h1 {
+    height: 20%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-family: "Gugi", Arial, Helvetica, sans-serif;
+    font-size: calc(var(--w)/13);
+
+    color: hsl(260, 100%, 30%);
+}
+
+/* NAVIGATION //////////////////////////////////////////// */
+
+nav {
+    height: 80%;
+}
+
+/* ACTS MENU ////////////////////////////////////////////////// */
+@keyframes color-pulse-2 {
+    0% {background-color: hsl(260, 100%, 2%);}
+    50% {background-color: hsl(260, 100%, 7%);}
+    100% {background-color: hsl(260, 100%, 2%);}
+}
+
+#acts {
+    height: 80%;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+
+    font-family: "Comfortaa";
+    font-size: calc(var(--w)/17);
+
+    color: hsl(100, 100%, 80%);
+    background-color: hsl(260, 100%, 5%);
+    animation: color-pulse-2 5s infinite ease-out;
+}
+
+#acts li {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CIRCULAR SHAPES */
+#acts i {
+    position: absolute;
+    top: -200%;
+    left: 0;
+    font-size: calc(var(--w));
+    color: hsla(260, 100%, 60%, 0.05);
+    pointer-events: none;
+}
+
+/* ABOUT LINK ///////////////////////////////////////////// */
+#about {
+    height: 20%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Gruppo", Arial, Helvetica, sans-serif;
+    font-size: calc(var(--w)/15);
+
+    color: hsl(260, 100%, 50%);
+}
+
+#about a {
+    border: 1px solid hsl(260, 100%, 20%);
+    padding: 2%;
+}
+
+/* LAPTOP / DESKTOP ///////////////////////////////////////// */
+@media only screen and (min-width: 1025px) {
+
+    /* MENU SECTION ////////////////////////////////////////// */
+    #menu {
+        overflow: hidden;
+    }
+    #background {
+        visibility: visible;
+
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* HEADER ////////////////////////////////////// */
+    h1 {
+        height: 40%;
+
+        text-align: left;
+        justify-content: flex-start;
+
+        font-size: calc(var(--w)/20);
+    }
+
+    /* NAVIGATION //////////////////////////////////////// */
+    nav {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* ACTS //////////////////////////////////////////////// */
+    #acts {
+        overflow: visible;
+        animation: none;
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+        top: -40%;
+
+        box-sizing: border-box;
+        padding: 3% 0;
+        align-items: center;
+
+        font-size: calc(var(--w)/45);
+
+        background-color: hsla(0, 0%, 0%, 0);
+    }
+
+    #acts li {
+        width: 11%;
+        height: 37%;
+
+        color: hsl(100, 100%, 70%);
+
+        box-shadow: 0px 0px 0px hsla(100, 100%, 70%, 0);
+    }
+
+    #acts li:hover {
+        color: magenta;
+        font-weight: 700;
+    }
+
+    #acts a {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: inherit;
+    }
+
+    #acts a:hover, #acts a:focus {
+        color: magenta;
+        font-weight: 700;
+    }
+
+    #acts p {
+        pointer-events: none;
+        color: inherit;
+        font-weight: inherit;
+
+        z-index: 3;
+
+        transition-property: color;
+        transition-duration: 1s;
+        transition-timing-function: linear;
+    }
+
+    /* CIRCLE ICONS ///////////////////////////////////// */
+    #acts i {
+        pointer-events: inherit;
+
+        position: absolute;
+        top:0;
+        left: 0;
+
+        border-radius: calc(var(--w)/10);
+
+        font-size: calc(var(--w)/9);
+
+        color: hsla(260, 100%, 20%, 0.5);
+
+        transition-property: color, box-shadow, font-size;
+        transition-duration: 2s;
+        transition-timing-function: ease-out;
+    }
+
+    #acts i:hover, #acts i:focus {
+        color: hsla(260, 100%, 50%, 1);
+        box-shadow: 0px 0px calc(var(--w)/20) hsla(260, 100%, 50%);
+        z-index: 2;
+    }
+
+    /* ABOUT SECTION //////////////////////////////////// */
+
+    #about {
+        position: absolute;
+        left: 80%;
+        top: 78%;
+        font-size: calc(var(--w)/25);
+    }
+
+
+    #about a {
+        transition-property: border, outline, color;
+        transition-duration: 3s;
+        transition-timing-function: ease-in;
+        outline: 0px solid hsl(260, 100%, 5%);
+    }
+
+    #about a:hover, #about a:focus {
+        border: calc(var(--w)/15) solid hsla(260, 100%, 5%, 0.6);
+        outline: calc(var(--w)/15) solid hsla(260, 100%, 10%, 0.6);
+        color: magenta;
+    }
+}

@@ -1,0 +1,49 @@
+:root {
+    background-color: black;
+    --w: 100vw;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.win-div {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.ur {
+    position: relative;
+    width: var(--w);
+    height: calc(var(--w) * 1.77);
+    box-sizing: border-box;
+}
+
+/* TABLET ////////////////////////////// */
+@media only screen and (min-width: 600px) {
+    :root {
+        --w: calc(100vh * 0.58);
+    }
+    .ur {
+        height: 100vh;
+        width: var(--w);
+    }
+}
+
+/* LAPTOP / DESKTOP //////////////////////////// */
+@media only screen and (min-width: 1025px) {
+    :root {
+        --w: calc(100vh * 1.6);
+    }
+    .ur {
+        height: 100vh;
+        width: var(--w);
+    }
+}
