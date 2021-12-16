@@ -126,7 +126,6 @@ nav {
 
 #acts {
     height: 80%;
-
     overflow: hidden;
 
     display: flex;
@@ -147,6 +146,10 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#acts p, #acts i {
+ pointer-events: none;
 }
 
 /* CIRCULAR SHAPES */
@@ -282,7 +285,6 @@ nav {
     }
 
     #acts p {
-        pointer-events: none;
         color: inherit;
         font-weight: inherit;
 
@@ -308,6 +310,7 @@ nav {
         transition-property: color, box-shadow, font-size;
         transition-duration: 2s;
         transition-timing-function: ease-out;
+        pointer-events: inherit;
     }
 
     #acts i:hover {
