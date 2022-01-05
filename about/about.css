@@ -9,6 +9,11 @@ html {
     to {opacity:1;}
 }
 
+@keyframes poster-fade-in {
+  from {opacity: 0;}
+  to{opacity: 0.5;}
+}
+
 /* STUFF FOR DESKTOP VERSION ///////////////////////////////// */
 #side-border-left {
     width: 0;
@@ -85,7 +90,8 @@ html {
     display: block;
     object-fit: contain;
 
-    animation: initial-fade-in 5s linear forwards;
+
+    animation: poster-fade-in 5s linear forwards;
 }
 
 /* HEADER SECTION ////////////////////////////////////// */
@@ -531,7 +537,7 @@ h1 {
         height: 90%;
         box-sizing: border-box;
         padding: 3% 0;
-        animation: initial-fade-in 10s ease-in forwards;
+        animation: poster-fade-in 10s ease-in forwards;
     }
 
     /* HEADER SECTION ////////////////////////////////////// */
