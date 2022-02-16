@@ -1,0 +1,436 @@
+html, body, div, span,
+h1, p,
+a,i,ul, li,
+nav, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+a:focus {
+	outline: none;
+}
+
+/* MOBILE TOOLS ///////////////////////////////////// */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  height: 100%;
+  -ms-overflow-style: none;
+  overflow: hidden;
+  overflow: -moz-scrollbars-none; 
+  background-color: black;
+}
+
+/* Chrome and Safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  /* Prevent address bar from disappearing on mobile. */
+  position: fixed;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Viewport Div */
+.vp {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  /* This allows us to use rows properly as otherwise
+  these divs will shrink down. */
+  flex: none;
+}
+
+.ur {
+  position: relative;
+  width: var(--w);
+  height: var(--h);
+}
+
+/* CONTENT /////////////////////////////////////////////// */
+/* GENERAL ///////////////////////////////////////////// */
+@keyframes fade-in {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+/* STATEMENT TEXT ////////////////////////////////////////////////// */
+p {
+  height: 80%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  font-family: "Comfortaa";
+  font-weight: 300;
+  font-size: calc(var(--w)/15);
+
+  color: hsl(100, 100%, 80%);
+}
+
+span {
+  padding: 10% 15% 10% 15%;
+  line-height: 4ex;
+  opacity: 0;
+}
+
+#first {
+  animation: fade-in 3s 2s forwards ease-in;
+}
+
+#second {
+  animation: fade-in 3s 4s forwards ease-in;
+}
+
+/* SCROLL-DOWN IN-PAGE LINK //////////////////////////////// */
+
+@keyframes color-pulse {
+  0% {color: hsl(100, 50%, 10%); text-shadow: 0 0 10px hsl(100, 100%, 10%);}
+  50% {color: hsl(100, 50%, 50%); text-shadow: 0 0 20px hsl(100, 100%, 80%);}
+  100% {color: hsl(100, 50%, 10%); text-shadow: 0 0 10px hsl(100, 100%, 10%);}
+}
+
+#scroll-down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: calc(var(--w)/6);
+
+  color: hsl(100, 100%, 10%);
+  background-color: hsla(0, 0%, 0%, 0.6);
+  animation: color-pulse 3s infinite ease-out; 
+}
+
+#scroll-down i {
+  opacity: 0;
+  animation: fade-in 3s 6s forwards ease-in;
+}
+
+#scroll-down::after {
+  content: "";
+
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  z-index: -1;
+
+  opacity: 0;
+  background-image: linear-gradient(
+      90deg,
+      black,
+      hsl(260, 100%, 15%),
+      black
+  );
+  animation: fade-in 3s 6s forwards ease-in;
+}
+
+#scroll-down:hover, #scroll-down:focus {
+  animation: color-pulse 1s infinite;
+  background-color: hsla(0, 0%, 0%, 0);
+}
+
+/* DIVIDER////////////////////////////////////////////////// */
+#divider {
+  width: 100vw;
+  height: 200vh;
+  background-image: linear-gradient(
+      black, hsl(260, 100%, 20%), black
+  );
+}
+
+/* MENU SECTION /////////////////////////////////////////// */
+#menu {
+  position: relative;
+}
+
+#background {
+  visibility: hidden;
+  position: absolute;
+}
+
+/* HEADER ////////////////////////////////////// */
+h1 {
+  height: 20%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  font-family: "Gugi", Arial, Helvetica, sans-serif;
+  font-size: calc(var(--w)/13);
+
+  color: hsl(260, 100%, 30%);
+}
+
+/* NAVIGATION //////////////////////////////////////////// */
+
+nav {
+  height: 80%;
+}
+
+/* ACTS MENU ////////////////////////////////////////////////// */
+@keyframes color-pulse-2 {
+  0% {background-color: hsl(260, 100%, 2%);}
+  50% {background-color: hsl(260, 100%, 7%);}
+  100% {background-color: hsl(260, 100%, 2%);}
+}
+
+#acts {
+  height: 80%;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+
+  font-family: "Comfortaa";
+  font-size: calc(var(--w)/17);
+
+  color: hsl(100, 100%, 80%);
+  background-color: hsl(260, 100%, 5%);
+  animation: color-pulse-2 5s infinite ease-out;
+}
+
+#acts li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#acts p, #acts i {
+pointer-events: none;
+}
+
+/* CIRCULAR SHAPES */
+#acts i {
+  position: absolute;
+  top: -200%;
+  left: 0;
+  font-size: calc(var(--w));
+  color: hsla(260, 100%, 60%, 0.05)
+}
+
+
+#acts a:hover, #acts a:focus {
+  transform: scale(130%);
+}
+
+/* ABOUT LINK ///////////////////////////////////////////// */
+#about {
+  height: 20%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Gruppo", Arial, Helvetica, sans-serif;
+  font-size: calc(var(--w)/15);
+
+  color: hsl(260, 100%, 50%);
+}
+
+#about a {
+  border: 1px solid hsl(260, 100%, 20%);
+  padding: 2%;
+}
+
+#about a:hover {
+  color: magenta;
+}
+
+/* LAPTOP / DESKTOP ///////////////////////////////////////// */
+@media only screen and (orientation: landscape) {
+
+  /* STATEMENT ///////////////////////////////////////// */
+  p {
+      font-size: calc(var(--w) / 40);
+  }
+
+  span {
+      padding: 2% 30%;
+  }
+
+  /* SCROLL DOWN IN-PAGE LINK ///////////////////////// */
+
+  #scroll-down {
+      font-size: calc(var(--w) / 15);
+      transition-property: background-color;
+      transition-duration: 2s;
+      transition-timing-function: ease-in;
+  }
+
+
+
+  /* MENU SECTION ////////////////////////////////////////// */
+  #menu {
+      overflow: hidden;
+  }
+  #background {
+      visibility: visible;
+
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+  }
+
+  /* HEADER ////////////////////////////////////// */
+  h1 {
+      height: 40%;
+
+      text-align: left;
+      justify-content: flex-start;
+
+      font-size: calc(var(--w)/20);
+  }
+
+  /* NAVIGATION //////////////////////////////////////// */
+  nav {
+      width: 100%;
+      height: 100%;
+  }
+
+  /* ACTS //////////////////////////////////////////////// */
+  #acts {
+      overflow: visible;
+      animation: none;
+
+      position: relative;
+      width: 100%;
+      height: 100%;
+      top: -40%;
+
+      box-sizing: border-box;
+      padding: 3% 0;
+      align-items: center;
+
+      font-size: calc(var(--w)/45);
+
+      background-color: hsla(0, 0%, 0%, 0);
+  }
+
+  #acts li {
+      width: 11%;
+      height: 37%;
+
+      color: hsl(100, 100%, 70%);
+
+      box-shadow: 0px 0px 0px hsla(100, 100%, 70%, 0);
+  }
+
+  #acts li:hover {
+    color: magenta;
+    font-weight: 700;
+  }
+
+  #acts a {
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: inherit;
+  }
+
+  #acts a:hover, #acts a:focus {
+      color: magenta;
+      font-weight: 700;
+      transform: scale(100%);
+  }
+
+  #acts p {
+      color: inherit;
+      font-weight: inherit;
+
+      z-index: 3;
+
+      transition-property: color;
+      transition-duration: 1s;
+      transition-timing-function: linear;
+  }
+
+  /* CIRCLE ICONS ///////////////////////////////////// */
+  #acts i {
+      position: absolute;
+      top:0;
+      left: 0;
+
+      border-radius: calc(var(--w)/10);
+
+      font-size: calc(var(--w)/9);
+
+      color: hsla(260, 100%, 20%, 0.5);
+
+      transition-property: color, box-shadow, font-size;
+      transition-duration: 2s;
+      transition-timing-function: ease-out;
+      pointer-events: inherit;
+  }
+
+  #acts i:hover {
+      color: hsla(260, 100%, 50%, 1);
+      box-shadow: 0px 0px calc(var(--w)/20) hsla(260, 100%, 50%);
+      z-index: 2;
+  }
+
+  /* ABOUT SECTION //////////////////////////////////// */
+
+  #about {
+      position: absolute;
+      left: 80%;
+      top: 78%;
+      font-size: calc(var(--w)/25);
+  }
+
+
+
+  #about a {
+      transition-property: border, outline, color;
+      transition-duration: 3s;
+      transition-timing-function: ease-in;
+      outline: 0px solid hsl(260, 100%, 5%);
+  }
+
+  #about a:hover, #about a:focus {
+    border: calc(var(--w)/15) solid hsla(260, 100%, 5%, 0.6);
+    outline: calc(var(--w)/15) solid hsla(260, 100%, 10%, 0.6);
+    border-radius: default;
+}
+
+
+}
