@@ -1,0 +1,156 @@
+html, body, div,
+h1,
+a,audio {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body {
+	line-height: 1;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+a:focus {
+	outline: none;
+}
+
+/* MOBILE TOOLS ///////////////////////////////////// */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  height: 100%;
+  -ms-overflow-style: none;
+  overflow: hidden;
+  overflow: -moz-scrollbars-none; 
+  background-color: black;
+}
+
+/* Chrome and Safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  /* Prevent address bar from disappearing on mobile. */
+  position: fixed;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Viewport Div */
+.vp {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  /* This allows us to use rows properly as otherwise
+  these divs will shrink down. */
+  flex: none;
+  align-items: flex-end;
+}
+
+.ur {
+  position: relative;
+  width: var(--w);
+  height: var(--h);
+}
+
+/* AUDIO SECTION ////////////////////////// */
+#audio-section {
+  z-index: 1;
+
+  width: 100%;
+  height: 20%;
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  border-radius: 50% 50% 0% 0%; 
+
+  background-color: black;
+}
+
+h1 {
+  font-family: "Gugi", Arial, Helvetica, sans-serif;
+  font-size: calc(var(--w)/20);
+
+  color: black;
+  color: white;
+}
+
+audio {
+  width: 75%; 
+  height: 30%;
+  max-width: 600px;
+}
+
+.back {
+  position: relative;
+  display: inline-block;
+  width: 30%;
+  height: 10%;
+  text-align: center;
+
+  font-family: "Gruppo", Arial, Helvetica, sans-serif;
+  font-size: calc(var(--w)/20);
+
+  color: gray;
+}
+
+.back i {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+
+  font-size: calc(var(--w)/18);
+}
+
+.back:hover, .back:focus {
+  color: white;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* LAPTOP / DESKTOP //////////////////////////// */
+@media only screen and (orientation: landscape) {
+
+  /* AUDIO SECTION ////////////////////////// */
+  #audio-section {
+      width: 50%;
+      height: 25%;
+
+      top: 75%;
+      left: 25%;
+  }
+
+  h1 {
+      font-size: calc(var(--w)/30);
+  }
+
+  .back {
+      font-size: calc(var(--w)/35);
+  }
+
+  .back i {
+      font-size: calc(var(--w)/45);
+      left: 80%;
+  }
+}
