@@ -53,7 +53,6 @@ body {
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
   scroll-snap-align: start;
   /* This allows us to use rows properly as otherwise
   these divs will shrink down. */
