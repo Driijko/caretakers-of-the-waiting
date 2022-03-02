@@ -103,8 +103,18 @@ body {
   align-items: center;
 }
 
-@media only screen and (orientation: landscape) {
+.abs {
+  position: absolute;
+}
 
+.desktop {
+  display: none;
+}
+
+@media only screen and (orientation: landscape) {
+  .desktop {
+    display: initial;
+  }
 }
 
 /* CONTENT ///////////////////////////////////// */
@@ -113,6 +123,8 @@ body {
   width: 100%;
   height: 100%;
   background-size: cover;
+  z-index: -1;
+  filter: brightness(0.3);
 }
 
 @media only screen and (max-width: 600px) {
@@ -124,9 +136,37 @@ body {
   #background {
     background-image: url("../assets/visual/images/project-team-background-medium.jpg");
   }
+  #border-left {
+    background-image: url("../assets/visual/images/border-left-medium.jpg");
+  }
+  #border-right {
+    background-image: url("../assets/visual/images/border-right-medium.jpg");
+  }
 }
 @media only screen and (min-width:1921px) {
   #background {
     background-image: url("../assets/visual/images/project-team-background-large.jpg");
+  }
+  #border-left {
+    background-image: url("../assets/visual/images/border-left-large.jpg");
+  }
+  #border-right {
+    background-image: url("../assets/visual/images/border-right-large.jpg");
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  #border-left, #border-right {
+    top: 0;
+    height: 100%;
+    width: 15%;
+    background-size: cover;
+  }
+  #border-left {
+    left: 0;
+  }
+  #border-right {
+    right: 0;
+    background-position: 50% 50%;
   }
 }
