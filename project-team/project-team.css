@@ -127,6 +127,10 @@ body {
   .desktop {
     display: initial;
   }
+
+  .mobile {
+    display: none;
+  }
 }
 
 /* CONTENT ///////////////////////////////////// */
@@ -364,7 +368,7 @@ background-color: red;
   align-items: center;
 
   font-family: "Gugi", Arial, Helvetica, sans-serif;
-  font-size: calc(var(--w)/10);
+  font-size: calc(var(--w)/12);
 }
 
 .team-member-role {
@@ -413,6 +417,17 @@ background-color: red;
 #stefan .team-member-description {
   padding: 5% 5%;
   height: 20%;
+}
+
+/* LARISSA ////////////////////////////////////////////////////////// */
+
+#larissa {
+  background-color: hsl(260, 100%, 5%);
+  color: hsl(0, 100%, 50%);
+}
+
+#larissa .team-member-description {
+  padding: 7% 5%;
 }
 
 @media only screen and (orientation: landscape) {
@@ -493,46 +508,46 @@ background-color: red;
     background-position: 50% 50%;
   }
 
-      /* TEAM SECTION /////////////////////////////////////////// */
-      #team-section-header h2 {
-        font-size: calc(var(--w)/10)
-    }
+  /* TEAM SECTION /////////////////////////////////////////// */
+  #team-section-header h2 {
+    font-size: calc(var(--w)/10)
+  }
 
-    /* TEAM MEMBER PROFILE ////////////////////////////////////// */
-    .team-member-pic {
-        width: 50%;
-        height: 50%;
-    }
-    .team-member-name {
+  /* TEAM MEMBER PROFILE ////////////////////////////////////// */
+  .team-member-pic {
+      width: 50%;
+      height: 50%;
+  }
+  .team-member-name {
 
-        width: 40%;
-        height: 25%;
+      width: 39%;
+      height: 25%;
 
-        position: absolute;
-        top: 0%;
-        left: 50%;
+      position: absolute;
+      top: 0%;
+      left: 50%;
 
-        font-size: calc(var(--w)/18);
+      font-size: calc(var(--w)/20);
 
-        text-align: center;
-    }
+      text-align: center;
+  }
 
-    .team-member-role {
-        width: 40%;
-        height: 25%;
-        position: absolute;
-        left: 50%;
-        top: 25%;
-        font-size: calc(var(--w)/20);
-    }
+  .team-member-role {
+      width: 40%;
+      height: 25%;
+      position: absolute;
+      left: 50%;
+      top: 25%;
+      font-size: calc(var(--w)/20);
+  }
 
-    .team-member-description {
-        height: 40%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: calc(var(--w)/45);
-    }
+  .team-member-description {
+      height: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: calc(var(--w)/45);
+  }
 
     /* STEFAN ------------------------------------------------ */
     #stefan .team-member-role {
