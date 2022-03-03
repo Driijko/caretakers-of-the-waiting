@@ -172,6 +172,17 @@ body {
         url("../assets/visual/images/splash-small.jpg")
     ;
   }
+
+  #actors-section {
+    background-image: 
+        linear-gradient(
+            black,
+            hsl(0, 0%, 0%, 0.6),             
+            black 
+        ),
+        url("../assets/visual/images/voice-actors-small.jpg")
+    ;
+  }
 }
 @media only screen and (min-width: 601px) and (max-width: 1920px) {
   #background {
@@ -191,6 +202,17 @@ body {
             black 
         ),
         url("../assets/visual/images/project-statement-medium.jpg")
+    ;
+  }
+
+  #actors-section {
+    background-image: 
+        linear-gradient(
+            black,
+            hsl(0, 0%, 0%, 0.6),             
+            black 
+        ),
+        url("../assets/visual/images/voice-actors-medium.jpg")
     ;
   }
 
@@ -233,6 +255,16 @@ body {
             black 
         ),
         url("../assets/visual/images/splash-large.jpg")
+    ;
+  }
+  #actors-section {
+    background-image: 
+        linear-gradient(
+            black,
+            hsl(0, 0%, 0%, 0.6),             
+            black 
+        ),
+        url("../assets/visual/images/voice-actors-large.jpg")
     ;
   }
 }
@@ -444,6 +476,12 @@ background-color: red;
   padding-top: 2%;
 }
 
+/* ACTORS SECTION ---------------------------------- */
+#actors-section {
+  background-size: 250%;
+  background-position: 50% 50%;
+}
+
 @media only screen and (orientation: landscape) {
   .ur {
     padding: 0% 10%;
@@ -583,5 +621,10 @@ background-color: red;
   /* PARKER ------------------------------------------------------- */
   #parker .team-member-description {
     padding: 5%;
+  }
+
+  /* ACTORS SECTION ----------------------------------------------- */
+  #actors-section {
+    background-size: 100%;
   }
 }
