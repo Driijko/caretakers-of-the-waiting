@@ -434,6 +434,16 @@ background-color: red;
   padding: 7% 5%;
 }
 
+/* PARKER ///////////////////////////////////////////////////// */
+#parker {
+  background-color: hsl(200, 100%, 4%);
+  color: hsl(150, 100%, 20%);
+}
+
+#parker .team-member-description {
+  padding-top: 2%;
+}
+
 @media only screen and (orientation: landscape) {
   .ur {
     padding: 0% 10%;
@@ -569,5 +579,9 @@ background-color: red;
       justify-content: center;
       align-items: center;
       font-size: calc(var(--w)/40);
+  }
+  /* PARKER ------------------------------------------------------- */
+  #parker .team-member-description {
+    padding: 5%;
   }
 }
