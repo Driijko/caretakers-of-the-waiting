@@ -492,4 +492,63 @@ background-color: red;
     background-size: 70%;
     background-position: 50% 50%;
   }
+
+      /* TEAM SECTION /////////////////////////////////////////// */
+      #team-section-header h2 {
+        font-size: calc(var(--w)/10)
+    }
+
+    /* TEAM MEMBER PROFILE ////////////////////////////////////// */
+    .team-member-pic {
+        width: 50%;
+        height: 50%;
+    }
+    .team-member-name {
+
+        width: 40%;
+        height: 25%;
+
+        position: absolute;
+        top: 0%;
+        left: 50%;
+
+        font-size: calc(var(--w)/18);
+
+        text-align: center;
+    }
+
+    .team-member-role {
+        width: 40%;
+        height: 25%;
+        position: absolute;
+        left: 50%;
+        top: 25%;
+        font-size: calc(var(--w)/20);
+    }
+
+    .team-member-description {
+        height: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: calc(var(--w)/45);
+    }
+
+    /* STEFAN ------------------------------------------------ */
+    #stefan .team-member-role {
+      width: 40%;
+      height: 25%;
+      position: absolute;
+      left: 50%;
+      top: 25%;
+      font-size: calc(var(--w)/30);
+    }
+  
+  #stefan .team-member-description {
+      height: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: calc(var(--w)/40);
+  }
 }
