@@ -170,6 +170,10 @@ body {
   line-height: 1;
 }
 
+.arrow:focus, .arrow:hover {
+  color: red;
+}
+
 /* POSTER ---------------------------------------------------- */
 #poster {
   width: 100%;
@@ -178,7 +182,67 @@ body {
   object-fit: contain;
 }
 
+/* HEADER ------------------------------------------------------- */
+h1 {
+  padding-left: 1%;
+  font-family: "Gugi", sans-serif;
+  font-size: calc(var(--w)/7);
+}
+
+#header ul {
+  height: 57%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  text-align: right;
+  padding-right: 2%;
+
+  font-family: "Gugi", Arial, Helvetica, sans-serif;
+  font-size: calc(var(--w)/16);
+}
+
+#header li:hover {
+  color: hsl(260, 60%, 0%);
+  background-color: white;
+}
+
+#header ul a:focus {
+background-color: red;
+}
+
+.back {
+  border: 1px solid white;
+  position: relative;
+  display: inline-block;
+  width: 30%;
+  height: 10%;
+  margin-left: 1%;
+
+  font-family: "Gruppo", Arial, Helvetica, sans-serif;
+  font-size: calc(var(--w)/10);
+
+  color: gray;
+}
+
+.back i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  font-size: calc(var(--w)/13);
+}
+
+.back:hover, .back:focus {
+  color: hsl(260, 100%, 70%);
+  background-color: black;
+}
+
 @media only screen and (orientation: landscape) {
+  .ur {
+    padding: 0% 10%;
+  }
   /* FIXED-LAYER ////////////////////////// */
   #border-left, #border-right {
     top: 0;
@@ -196,6 +260,35 @@ body {
 
   /* POSTER ------------------------------------- */
   #poster {
-    padding: 2% 33%;
+    padding: 2% 28%;
+  }
+
+  .arrow-container {
+    width: 78%;
+    bottom: 3%;
+    font-size: calc(var(--w)/20);
+  }
+
+  /* HEADER ------------------------------------ */
+  h1 {
+    height: 42%;
+    display: flex;
+    align-items: center;
+    font-size: calc(var(--w)/18);
+  }
+
+  #header ul {
+    height: 45%;
+    font-size: calc(var(--w)/35);
+  }
+
+  .back {
+    font-size: calc(var(--w)/25);
+  }
+
+  .back i {
+    top: 15%;
+    left: 70%;
+    font-size: calc(var(--w)/20);
   }
 }
