@@ -143,6 +143,10 @@ body {
   filter: brightness(0.3);
 }
 
+#team-section-header {
+  background-size: 100%;
+}
+
 @media only screen and (max-width: 600px) {
   #background {
     background-image: url("../assets/visual/images/project-team-background-small.jpg");
@@ -155,6 +159,17 @@ body {
             black 
         ),
         url("../assets/visual/images/project-statement-small.jpg")
+    ;
+  }
+
+  #team-section-header {
+    background-image: 
+        linear-gradient(
+            black,
+            hsl(0, 0%, 0%, 0.5),             
+            black 
+        ),
+        url("../assets/visual/images/splash-small.jpg")
     ;
   }
 }
@@ -178,6 +193,17 @@ body {
         url("../assets/visual/images/project-statement-medium.jpg")
     ;
   }
+
+  #team-section-header {
+    background-image: 
+        linear-gradient(
+            black,
+            hsl(0, 0%, 0%, 0.5),             
+            black 
+        ),
+        url("../assets/visual/images/splash-medium.jpg")
+    ;
+  }
 }
 @media only screen and (min-width:1921px) {
   #background {
@@ -197,6 +223,16 @@ body {
             black 
         ),
         url("../assets/visual/images/project-statement-large.jpg")
+    ;
+  }
+  #team-section-header {
+    background-image: 
+        linear-gradient(
+            black,
+            hsl(0, 0%, 0%, 0.5),             
+            black 
+        ),
+        url("../assets/visual/images/splash-large.jpg")
     ;
   }
 }
@@ -369,5 +405,16 @@ background-color: red;
     top: 15%;
     left: 70%;
     font-size: calc(var(--w)/20);
+  }
+
+  /* PROJECT STATEMENT ////////////////////////////////////// */
+  #project-statement .ur {
+    padding: 5% 15%;
+  }
+  #project-statement p {
+    font-size: calc(var(--w)/50);
+  }
+  #project-statement .arrow-container {
+    width: 66%;
   }
 }
