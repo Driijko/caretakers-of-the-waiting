@@ -183,6 +183,17 @@ body {
         url("../assets/visual/images/voice-actors-small.jpg")
     ;
   }
+
+  #web-design-section {
+    background-image: 
+    linear-gradient(
+        black,
+        hsl(0, 0%, 0%, 0.7),             
+        black 
+    ),
+    url("../assets/visual/images/web-design-small.jpg")
+    ;
+  }
 }
 @media only screen and (min-width: 601px) and (max-width: 1920px) {
   #background {
@@ -513,6 +524,11 @@ background-color: red;
 
 .centered-image {
   object-position: 50% 40%;
+}
+
+/* WEB DESIGN SECTION ------------------------------- */
+#web-design-section {
+  background-size: 200%;
 }
 
 @media only screen and (orientation: landscape) {
