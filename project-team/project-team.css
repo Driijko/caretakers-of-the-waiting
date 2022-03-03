@@ -426,6 +426,10 @@ background-color: red;
   color: hsl(0, 100%, 50%);
 }
 
+#larissa .team-member-pic {
+  object-position: 0% 50%;
+}
+
 #larissa .team-member-description {
   padding: 7% 5%;
 }
