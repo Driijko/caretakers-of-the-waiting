@@ -237,6 +237,17 @@ body {
         url("../assets/visual/images/splash-medium.jpg")
     ;
   }
+
+  #web-design-section {
+    background-image: 
+    linear-gradient(
+        black,
+        hsl(0, 0%, 0%, 0.7),             
+        black 
+    ),
+    url("../assets/visual/images/web-design-medium.jpg")
+    ;
+  }
 }
 @media only screen and (min-width:1921px) {
   #background {
@@ -276,6 +287,17 @@ body {
             black 
         ),
         url("../assets/visual/images/voice-actors-large.jpg")
+    ;
+  }
+
+  #web-design-section {
+    background-image: 
+    linear-gradient(
+        black,
+        hsl(0, 0%, 0%, 0.7),             
+        black 
+    ),
+    url("../assets/visual/images/web-design-medium.jpg")
     ;
   }
 }
@@ -531,6 +553,35 @@ background-color: red;
   background-size: 200%;
 }
 
+/* DREEKO -------------------------------------------- */
+#dreeko {
+  background-color: black;
+}
+
+#dreeko-logo {
+  object-fit: contain;
+  width: 100%;
+  height: 40%;
+}
+
+#dreeko p {
+  height: 25%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 5%;
+
+  text-align: center;
+  line-height: 2.5ex;
+
+  font-family: "Comfortaa";
+  font-size: calc(var(--w)/16);
+
+  color: hsl(260, 100%, 70%);
+}
+
 @media only screen and (orientation: landscape) {
   .ur {
     padding: 0% 10%;
@@ -689,7 +740,6 @@ background-color: red;
   }
 
   .voice-actor-name {
-    /* border: 4px solid red; */
     width: 50%;
     position: relative;
     top: -80%;
@@ -706,5 +756,10 @@ background-color: red;
     left: 50%;
     text-align: center;
     font-size: calc(var(--w)/30);
+  }
+
+  /* WEB DESIGN SECTION ----------------------------- */
+  #web-design-section {
+    background-size: 100%;
   }
 }
