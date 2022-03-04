@@ -606,6 +606,11 @@ background-color: red;
   font-size: calc(var(--w)/8);
 }
 
+#fonts ul a:hover, #fonts ul a:focus {
+  color: black;
+  background-color: white;
+}
+
 #gugi {
   font-family: "Gugi", Arial, Helvetica, sans-serif;
 }
@@ -629,6 +634,83 @@ background-color: red;
   font-family: "Comfortaa", Arial, Helvetica, sans-serif;
 }
 
+#fonts p a {
+  color:hsl(100, 100%, 80%);
+}
+
+#fonts p a:hover, #fonts p a:focus {
+  color: red;
+}
+
+/* PHOTO CREDITS SECTION //////////////////////////////////// */
+.photos h3 {
+  height: 15%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  font-family: "Gugi", Arial, Helvetica, sans-serif;
+  font-size: calc(var(--w)/7);
+}
+
+.photos #sub-header {
+  height: 15%;
+
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Comfortaa", Arial, Helvetica, sans-serif;
+  font-size: calc(var(--w)/18);
+}
+
+.photos #sub-header a {
+  padding-left: 2%;
+  color: hsl(100, 100%, 80%)
+}
+
+#list-mention {
+font-family: "Comfortaa", sans-serif;
+font-size: calc(var(--w)/25);
+padding-left: 5%;
+line-height: 1.5;
+padding-bottom: 5%;
+}
+
+.photo-credit-list {
+font-family: "Comfortaa", sans-serif;
+}
+
+#photo2 .photo-credit-list {
+padding-top: 10%;
+}
+
+.photo-credit-list li {
+width: 100%;
+padding-bottom: 5%;
+}
+
+.photo-credit-list a {
+display: block;
+border-top: calc(var(--w)/100) solid hsl(100, 100%, 70%);
+border-bottom: calc(var(--w)/100) solid hsl(100, 100%, 70%);
+width: 100%;
+padding: 1% 0% 1% 2%;
+color:hsl(100, 100%, 80%);
+}
+
+#photo3 .photo-credit-list {
+padding-top: 10%;
+}
+
+#photo3 .back {
+position: absolute;
+left: 34%;
+top: 60%;
+}
 
 @media only screen and (orientation: landscape) {
   .ur {
@@ -817,5 +899,69 @@ background-color: red;
   }
   #dreeko p {
       font-size: calc(var(--w)/40);
+  }
+
+  /* FONTS ------------------------------------------- */
+  #fonts h3 {
+    height: 30%;
+    font-size: calc(var(--w)/10)
+  }
+
+  #fonts ul {
+      height: 40%;
+  }
+
+  #fonts ul a {
+      font-size: calc(var(--w)/17);
+  }
+
+  #fonts p {
+    height: 20%;
+
+    text-align: left;
+
+    padding-left: 3%;
+
+    font-size: calc(var(--w)/60);
+  }
+
+  /* PHOTO CREDITS SECTION ///////////////////////////// */
+  .photos h3 {
+      font-size: calc(var(--w)/15);
+      height: 14%;
+  }
+
+  .photos #sub-header {
+      height: 10%;
+      font-size: calc(var(--w)/30);
+  }
+
+  .photos #sub-header a:hover, .photos #sub-header a:focus {
+    color: red;
+  }
+
+  #list-mention {
+    text-align: center;
+    height: 10%;
+    font-size: calc(var(--w)/50);
+  }
+
+  .photo-credit-list li {
+    padding-bottom: 2%;
+  }
+
+  .photo-credit-list a {
+    border-width: calc(var(--w)/400);
+  }
+
+  .photo-credit-list a:hover, .photo-credit-list a:focus {
+    background-color:white;
+    color: black;
+    border-color: white;
+    font-weight: bold;
+  }
+
+  #photo2 .photo-credit-list {
+    padding-top: 3%;
   }
 }
