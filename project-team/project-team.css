@@ -459,6 +459,10 @@ h1 {
   font-size: calc(var(--w)/20);
 }
 
+.team-member .arrow-container {
+  color: white;
+}
+
 /* STEFAN ///////////////////////////////////////////////// */
 #stefan {
   background-color: aqua;
@@ -488,10 +492,6 @@ h1 {
 
 #larissa .team-member-description {
   padding: 7% 5%;
-}
-
-#larissa .arrow-container a:hover, #larissa .arrow-container a:focus {
-  color: white;
 }
 
 /* PARKER ///////////////////////////////////////////////////// */
@@ -541,6 +541,11 @@ h1 {
 
 .centered-image {
   object-position: 50% 40%;
+}
+
+#brahm-role {
+  padding-top: 5%;
+  line-height: 1.5;
 }
 
 /* WEB DESIGN SECTION ------------------------------- */
@@ -728,22 +733,23 @@ top: 60%;
 
 @media only screen and (orientation: landscape) {
   .ur {
-    padding: 0% 10%;
+    padding: 0% calc(var(--w)/9);
   }
   /* FIXED-LAYER ////////////////////////// */
   #border-left, #border-right {
     top: 0;
     height: 100%;
-    width: 15%;
+    width: calc(var(--w)/9);
     background-size: cover;
     position: fixed;
+    animation: fade-in 3s ease-in forwards;
+    background-position: 50% 50%;
   }
   #border-left {
     left: 0;
   }
   #border-right {
     right: 0;
-    background-position: 50% 50%;
   }
 
   /* HEADER DIVIDERS ----------------------- */
