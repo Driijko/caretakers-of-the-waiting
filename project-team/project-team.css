@@ -644,7 +644,7 @@ background-color: red;
 
 /* PHOTO CREDITS SECTION //////////////////////////////////// */
 .photos h3 {
-  height: 15%;
+  height: 13%;
 
   display: flex;
   justify-content: center;
@@ -656,7 +656,7 @@ background-color: red;
 }
 
 .photos #sub-header {
-  height: 15%;
+  height: 7%;
 
   display: flex;
   text-align: center;
