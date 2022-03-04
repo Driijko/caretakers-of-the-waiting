@@ -685,7 +685,11 @@ font-family: "Comfortaa", sans-serif;
 }
 
 #photo2 .photo-credit-list {
-padding-top: 10%;
+padding-top: 2%;
+}
+
+#photo2 .arrow-container {
+  bottom: 2%;
 }
 
 .photo-credit-list li {
