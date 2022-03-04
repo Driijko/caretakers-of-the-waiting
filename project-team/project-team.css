@@ -373,7 +373,8 @@ h1 {
 }
 
 #header ul a:focus {
-background-color: red;
+  color: hsl(260, 60%, 0%);
+  background-color: white;
 }
 
 .back {
@@ -497,6 +498,10 @@ background-color: red;
 
 #larissa .team-member-description {
   padding: 7% 5%;
+}
+
+#larissa .arrow-container a:hover, #larissa .arrow-container a:focus {
+  color: white;
 }
 
 /* PARKER ///////////////////////////////////////////////////// */
