@@ -1,16 +1,7 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html, body, div, span,
+h1, h2, h3,p,
+a,img,i,ul, li,
+header,nav,section {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -19,27 +10,14 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+header,nav, section {
 	display: block;
 }
 body {
 	line-height: 1;
 }
-ol, ul {
+ul {
 	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
 }
 a {
 	text-decoration: none;
@@ -134,8 +112,12 @@ body {
 }
 
 /* CONTENT ///////////////////////////////////// */
+@keyframes fade-in {from{opacity:0;}to{opacity:1;}}
+@keyframes partial-fade-in {from{opacity:0;}to{opacity:0.5;}}
+
 :root {
   color: white;
+  background-color: black;
 }
 
 /* FIXED-LAYER ---------------------------------- */
@@ -145,6 +127,7 @@ body {
   background-size: cover;
   z-index: -1;
   filter: brightness(0.3);
+  animation: fade-in 2s forwards ease-in;
 }
 
 @media only screen and (max-width: 600px) {
@@ -344,6 +327,13 @@ body {
   padding: 10% 5%;
   object-position: 50% 50%;
   object-fit: contain;
+  opacity: 0;
+  animation: partial-fade-in 5s 3s ease-in forwards;
+}
+
+#poster-section .arrow-container {
+  opacity: 0;
+  animation: fade-in 2s 8s ease-in forwards;
 }
 
 /* HEADER ------------------------------------------------------- */
@@ -630,7 +620,7 @@ h1 {
 
 #fonts p {
   height: 33%;
-
+  font-size: calc(var(--w)/30);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -645,6 +635,10 @@ h1 {
 
 #fonts p a:hover, #fonts p a:focus {
   color: red;
+}
+
+#fonts .arrow-container {
+  bottom: 2%;
 }
 
 /* PHOTO CREDITS SECTION //////////////////////////////////// */
@@ -677,6 +671,10 @@ h1 {
   color: hsl(100, 100%, 80%)
 }
 
+.photos #sub-header a:hover, .photos #sub-header a:focus {
+  color: red;
+}
+
 #list-mention {
 font-family: "Comfortaa", sans-serif;
 font-size: calc(var(--w)/25);
@@ -703,12 +701,19 @@ padding-bottom: 5%;
 }
 
 .photo-credit-list a {
-display: block;
-border-top: calc(var(--w)/100) solid hsl(100, 100%, 70%);
-border-bottom: calc(var(--w)/100) solid hsl(100, 100%, 70%);
-width: 100%;
-padding: 1% 0% 1% 2%;
-color:hsl(100, 100%, 80%);
+  display: block;
+  border-top: calc(var(--w)/100) solid hsl(100, 100%, 70%);
+  border-bottom: calc(var(--w)/100) solid hsl(100, 100%, 70%);
+  width: 100%;
+  padding: 1% 0% 1% 2%;
+  color:hsl(100, 100%, 80%);
+}
+
+.photo-credit-list a:hover, .photo-credit-list a:focus {
+  background-color:white;
+  color: black;
+  border-color: white;
+  font-weight: bold;
 }
 
 #photo3 .photo-credit-list {
@@ -945,9 +950,7 @@ top: 60%;
       font-size: calc(var(--w)/30);
   }
 
-  .photos #sub-header a:hover, .photos #sub-header a:focus {
-    color: red;
-  }
+
 
   #list-mention {
     text-align: center;
@@ -961,13 +964,6 @@ top: 60%;
 
   .photo-credit-list a {
     border-width: calc(var(--w)/400);
-  }
-
-  .photo-credit-list a:hover, .photo-credit-list a:focus {
-    background-color:white;
-    color: black;
-    border-color: white;
-    font-weight: bold;
   }
 
   #photo2 .photo-credit-list {
