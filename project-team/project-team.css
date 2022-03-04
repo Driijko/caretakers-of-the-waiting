@@ -762,4 +762,12 @@ background-color: red;
   #web-design-section {
     background-size: 100%;
   }
+
+  /* DREEKO -------------------------------------------- */
+  #dreeko-logo {
+    padding: 7%;
+  }
+  #dreeko p {
+      font-size: calc(var(--w)/40);
+  }
 }
